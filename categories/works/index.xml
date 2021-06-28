@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Works on Linnlinnyii&#39;s Blog</title>
+    <link>https://linnyii.github.io/categories/works/</link>
+    <description>Recent content in Works on Linnlinnyii&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 28 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://linnyii.github.io/categories/works/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Work1_資料庫應用（新增/刪除/修改）</title>
+      <link>https://linnyii.github.io/blog/post1/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://linnyii.github.io/blog/post1/</guid>
+      <description>作品描述： 此為於Hahow_資料庫設計課程所要求之作業，
+創造出一畫面連接資料庫，且擁有新增，刪除，修改等功能，
+以下為大致做法描述
+Step1: 藉由bootstrap工具快速提供頁面的表格，輸入框等呈現畫面。
+Step2: 準備3個jsp file ，分別為Insert.jsp /gotoUpdate.</description>
+    </item>
+    
+  </channel>
+</rss>

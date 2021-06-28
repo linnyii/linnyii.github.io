@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>Linnlinnyii&#39;s Blog</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="自己實作過程中所發現的可能原因">
+  <meta name="author" content="Linnyii">
+  <meta name="generator" content="Hugo 0.84.0" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://linnyii.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://linnyii.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://linnyii.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://linnyii.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://linnyii.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://linnyii.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://linnyii.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://linnyii.github.io"><img class="img-fluid"
+          src="https://linnyii.github.io/images/linnyii_blog.png" alt="Linnlinnyii&#39;s Blog"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu h3"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/linnlinnyii"><i class="ti-facebook"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/tingtingyi1920820/"><i class="ti-instagram"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/linnyii"><i class="ti-github"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/linnlinnyii001/"><i class="ti-linkedin"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://linnyii.github.io"><img class="img-fluid"
+            src="https://linnyii.github.io/images/linnyii_blog.png" alt="Linnlinnyii&#39;s Blog"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://linnyii.github.io/about">About</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://linnyii.github.io/blog">Post</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://linnyii.github.io/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <a href="/categories/database"
+          class="text-primary">Data base</a>
+        
+        <h2>資料庫無法串出並呈現於頁面的可能原因</h2>
+        <div class="mb-3 post-meta">
+          <span>By Linnyii</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>28 June 2021</span>
+          
+        </div>
+        
+        <div class="content mb-5">
+          <p>在實作<a href="/blog/post1">Work1_資料庫應用（新增/刪除/修改)</a>的過程中，發現了以下幾種資料庫無法成功串出頁面的幾種可能原因：</p>
+<h6 id="忘記匯入jdbc-driver-">忘記匯入JDBC Driver ：</h6>
+<p>導致資料庫conn 物件一直為null。</p>
+<h6 id="資料庫裡的資料可能不完整">資料庫裡的資料可能不完整：</h6>
+<p>以自身情況舉例，寫了一個function 去列印出特定幾個欄位裡的資料，但遇到資料庫裡某些欄位為空時，則會拋出exception.</p>
+<p>解決辦法為，將資料庫裡的資料補齊，或是另外撰寫邏輯判斷此情況應如何反應。</p>
+<h6 id="jsp-file-裡所設定的servlet-錯誤">JSP file 裡所設定的Servlet 錯誤：</h6>
+<p>負責接收資料的Servlet 名稱必須正確或是真的存在，否則無法順利接收指令。</p>
+<h6 id="jsp-file-所儲存的位置">JSP file 所儲存的位置：</h6>
+<p>記得JSP file 必須存放於webapp 資料夾下才可以順利運作。</p>
+<h6 id="servlet-接收後段資料後所要response-出去的jsp-file-必須設定正確">Servlet 接收後段資料後所要response 出去的JSP file 必須設定正確：</h6>
+<p>否則資料可能會回傳至錯的頁面，導致使用者看不到回傳的資料。</p>
+<p>以上為目前觀察到的幾種情況，如未來有遇新的情況會再持續增加。</p>
+
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<script>
+  var indexURL = "https://linnyii.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://linnyii.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://linnyii.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://linnyii.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://linnyii.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://linnyii.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://linnyii.github.io/plugins/search/mark.js"></script>
+
+<script src="https://linnyii.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://linnyii.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+</html>

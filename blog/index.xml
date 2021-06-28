@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Linnlinnyii&#39;s Blog</title>
+    <link>https://linnyii.github.io/blog/</link>
+    <description>Recent content in blog on Linnlinnyii&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0600</lastBuildDate><atom:link href="https://linnyii.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Work1_資料庫應用（新增/刪除/修改）</title>
+      <link>https://linnyii.github.io/blog/post1/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://linnyii.github.io/blog/post1/</guid>
+      <description>作品描述： 此為於Hahow_資料庫設計課程所要求之作業，
+創造出一畫面連接資料庫，且擁有新增，刪除，修改等功能，
+以下為大致做法描述
+Step1: 藉由bootstrap工具快速提供頁面的表格，輸入框等呈現畫面。
+Step2: 準備3個jsp file ，分別為Insert.jsp /gotoUpdate.</description>
+    </item>
+    
+    <item>
+      <title>資料庫無法串出並呈現於頁面的可能原因</title>
+      <link>https://linnyii.github.io/blog/post2/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://linnyii.github.io/blog/post2/</guid>
+      <description>在實作Work1_資料庫應用（新增/刪除/修改)的過程中，發現了以下幾種資料庫無法成功串出頁面的幾種可能原因：
+忘記匯入JDBC Driver ： 導致資料庫conn 物件一直為null。
+資料庫裡的資料可能不完整： 以自身情況舉例，寫了一個function 去列印出特定幾個欄位裡的資料，但遇到資料庫裡某些欄位為空時，則會拋出exception.
+解決辦法為，將資料庫裡的資料補齊，或是另外撰寫邏輯判斷此情況應如何反應。</description>
+    </item>
+    
+  </channel>
+</rss>
